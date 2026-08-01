@@ -12,15 +12,25 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
+
       <Navbar />
+
       <Hero />
+
       <About />
+
       <Tours />
+
       <Features />
+
       <Testimonials />
+
       <Contact />
+
       <FloatingWhatsapp />
+
       <Footer />
+
     </>
   );
 }
