@@ -1,82 +1,186 @@
 export default function Footer() {
+
   return (
-    <footer className="bg-slate-950 text-white py-12 px-6">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    <footer
+      className="
+      bg-slate-950
+      text-white
+      py-16
+      px-6
+      "
+    >
 
+      <div className="
+      max-w-7xl
+      mx-auto
+      grid
+      md:grid-cols-3
+      gap-10
+      ">
+
+
+        {/* Logo ve açıklama */}
 
         <div>
-          <h3 className="text-2xl font-bold mb-4">
-            🇧🇦 Bosna Rehberi
-          </h3>
 
-          <p className="text-slate-400">
-            Bosna Hersek'in tarihi şehirlerini yerel rehberler eşliğinde keşfedin.
+
+          <h2 className="
+          text-3xl
+          font-extrabold
+          mb-4
+          ">
+
+            🇧🇦 Bosna Rehberi
+
+          </h2>
+
+
+          <p className="
+          text-slate-300
+          leading-relaxed
+          ">
+
+            Bosna'nın tarihini, kültürünü ve
+            eşsiz güzelliklerini yerel rehberler
+            eşliğinde keşfedin.
+
           </p>
+
+
         </div>
 
 
+
+
+        {/* Hızlı Menü */}
+
         <div>
-          <h3 className="text-xl font-bold mb-4">
+
+
+          <h3 className="
+          text-xl
+          font-bold
+          mb-5
+          ">
+
             Hızlı Menü
+
           </h3>
 
-          <div className="flex flex-col gap-2 text-slate-300">
 
-            <a href="#">
-              Anasayfa
-            </a>
 
-            <a href="#turlar">
-              Turlar
-            </a>
+          <ul className="
+          space-y-3
+          text-slate-300
+          ">
 
-            <a href="#">
-              Hakkımızda
-            </a>
 
-            <a href="#">
-              İletişim
-            </a>
+            <li>
+              <a href="/">
+                Anasayfa
+              </a>
+            </li>
+
+
+            <li>
+              <a href="/#turlar">
+                Turlar
+              </a>
+            </li>
+
+
+            <li>
+              <a href="/#iletisim">
+                İletişim
+              </a>
+            </li>
+
+
+            <li>
+              <a href="/rezervasyon">
+                Rezervasyon
+              </a>
+            </li>
+
+
+          </ul>
+
+
+        </div>
+
+
+
+
+
+        {/* İletişim */}
+
+        <div>
+
+
+          <h3 className="
+          text-xl
+          font-bold
+          mb-5
+          ">
+
+            İletişim
+
+          </h3>
+
+
+
+          <div className="
+          space-y-3
+          text-slate-300
+          ">
+
+
+            <p>
+              📞 +90 533 296 65 18
+            </p>
+
+
+            <p>
+              💬 WhatsApp Destek
+            </p>
+
+
+            <p>
+              🇧🇦 Bosna Hersek Turları
+            </p>
+
 
           </div>
 
-        </div>
-
-
-        <div>
-
-          <h3 className="text-xl font-bold mb-4">
-            İletişim
-          </h3>
-
-          <p className="text-slate-300 mb-3">
-            WhatsApp üzerinden bize ulaşabilirsiniz.
-          </p>
-
-
-          <a
-            href="https://wa.me/905332966518"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 px-5 py-3 rounded-xl transition"
-          >
-            WhatsApp'tan Yaz
-          </a>
 
         </div>
+
 
 
       </div>
 
 
-      <div className="border-t border-slate-800 mt-10 pt-6 text-center text-slate-500">
+
+
+
+      <div className="
+      border-t
+      border-slate-800
+      mt-12
+      pt-6
+      text-center
+      text-slate-400
+      ">
 
         © 2026 Bosna Rehberi. Tüm hakları saklıdır.
 
       </div>
 
 
+
     </footer>
+
   );
+
 }

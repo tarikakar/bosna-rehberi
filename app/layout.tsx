@@ -1,78 +1,51 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 
 
 export const metadata: Metadata = {
 
-  title:
-    "Bosna Rehberi | Bosna Turları, Mostar ve Saraybosna Gezileri",
+  title: "Bosna Rehberi | Mostar ve Saraybosna Turları",
 
 
   description:
-    "Bosna Rehberi ile Mostar, Saraybosna, Travnik ve Yayçe turlarını profesyonel rehber eşliğinde keşfedin. Unutulmaz Bosna Hersek gezileri için bize ulaşın.",
-
+    "Bosna'nın tarihi şehirlerini, Mostar Köprüsü'nü, Saraybosna'yı ve eşsiz güzelliklerini yerel rehberler eşliğinde keşfedin.",
 
 
   keywords: [
-
-    "Bosna turu",
-    "Bosna Hersek turları",
+    "Bosna turları",
     "Mostar turu",
     "Saraybosna turu",
+    "Bosna Rehberi",
     "Travnik turu",
     "Yayçe turu",
-    "Bosna gezisi",
-    "Mostar Köprüsü",
-    "Bosna rehberi"
-
   ],
-
-
-
-  authors: [
-
-    {
-      name: "Bosna Rehberi",
-    }
-
-  ],
-
-
-
-  icons: {
-
-    icon: "/icons/favicon.png",
-
-  },
-
 
 
   openGraph: {
 
     title:
-      "Bosna Rehberi | Unutulmaz Bosna Turları",
-
+      "Bosna Rehberi | Mostar ve Saraybosna Turları",
 
     description:
-      "Mostar, Saraybosna ve Bosna Hersek'in tarihi şehirlerini profesyonel rehberlerle keşfedin.",
-
+      "Yerel rehberler eşliğinde unutulmaz Bosna deneyimi.",
 
     type: "website",
 
-
-    locale:
-      "tr_TR",
-
-
-  },
-
-
-
-  robots: {
-
-    index: true,
-
-    follow: true,
+    locale: "tr_TR",
 
   },
 
@@ -94,11 +67,18 @@ export default function RootLayout({
 
   return (
 
-    <html lang="tr">
+    <html lang="tr" suppressHydrationWarning>
 
 
-      <body>
+      <body
 
+        className={`
+        ${geistSans.variable}
+        ${geistMono.variable}
+        antialiased
+        `}
+
+      >
 
         {children}
 
@@ -109,6 +89,5 @@ export default function RootLayout({
     </html>
 
   );
-
 
 }
