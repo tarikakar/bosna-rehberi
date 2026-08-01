@@ -4,13 +4,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
 
-  title: "Bosna Rehberi | Bosna Turları, Mostar ve Saraybosna Gezileri",
+  title:
+    "Bosna Rehberi | Bosna Turları, Mostar ve Saraybosna Gezileri",
+
 
   description:
-    "Bosna Rehberi ile Mostar, Saraybosna, Travnik ve Yayçe turlarını keşfedin. Profesyonel rehber eşliğinde unutulmaz Bosna Hersek gezileri.",
+    "Bosna Rehberi ile Mostar, Saraybosna, Travnik ve Yayçe turlarını profesyonel rehber eşliğinde keşfedin. Unutulmaz Bosna Hersek gezileri için bize ulaşın.",
+
 
 
   keywords: [
+
     "Bosna turu",
     "Bosna Hersek turları",
     "Mostar turu",
@@ -18,14 +22,29 @@ export const metadata: Metadata = {
     "Travnik turu",
     "Yayçe turu",
     "Bosna gezisi",
+    "Mostar Köprüsü",
+    "Bosna rehberi"
+
   ],
+
 
 
   authors: [
+
     {
       name: "Bosna Rehberi",
-    },
+    }
+
   ],
+
+
+
+  icons: {
+
+    icon: "/icons/favicon.png",
+
+  },
+
 
 
   openGraph: {
@@ -33,19 +52,28 @@ export const metadata: Metadata = {
     title:
       "Bosna Rehberi | Unutulmaz Bosna Turları",
 
+
     description:
-      "Mostar, Saraybosna ve Bosna'nın tarihi şehirlerini profesyonel rehberlerle keşfedin.",
+      "Mostar, Saraybosna ve Bosna Hersek'in tarihi şehirlerini profesyonel rehberlerle keşfedin.",
+
 
     type: "website",
 
-    locale: "tr_TR",
+
+    locale:
+      "tr_TR",
+
 
   },
 
 
+
   robots: {
+
     index: true,
+
     follow: true,
+
   },
 
 
@@ -54,23 +82,33 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({
+
   children,
+
 }: Readonly<{
+
   children: React.ReactNode;
+
 }>) {
+
 
   return (
 
     <html lang="tr">
 
+
       <body>
+
 
         {children}
 
+
       </body>
+
 
     </html>
 
   );
+
 
 }
