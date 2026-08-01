@@ -18,7 +18,7 @@ export default function ReservationPage() {
   const sendWhatsApp = () => {
 
     const message = `
-Merhaba, rezervasyon hakkında bilgi almak istiyorum.
+Merhaba, Bosna turu için rezervasyon bilgisi almak istiyorum.
 
 Ad Soyad: ${form.name}
 Yaş: ${form.age}
@@ -39,24 +39,29 @@ Not: ${form.note}
 
 
   return (
+
     <main className="min-h-screen bg-slate-100 dark:bg-slate-950 py-32 px-6">
 
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
 
-        <h1 className="text-5xl font-extrabold text-center text-slate-900 dark:text-white mb-6">
-          Rezervasyon
-        </h1>
+        <div className="text-center mb-12">
+
+          <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6">
+            Bosna Geziniz İçin Rezervasyon
+          </h1>
 
 
-        <p className="text-center text-xl text-slate-600 dark:text-slate-300 mb-12">
-          Bosna gezinizi planlamak için bilgilerinizi bırakın.
-        </p>
+          <p className="text-xl text-slate-600 dark:text-slate-300">
+            Bilgilerinizi bırakın, size en uygun tur planını birlikte oluşturalım.
+          </p>
+
+        </div>
 
 
 
-        <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl p-8">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl p-8 md:p-12">
 
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -71,6 +76,7 @@ Not: ${form.note}
 
             <input
               placeholder="Yaş"
+              type="number"
               className="p-4 rounded-xl border bg-white text-slate-900 dark:bg-slate-800 dark:text-white"
               onChange={(e)=>setForm({...form,age:e.target.value})}
             />
@@ -88,7 +94,7 @@ Not: ${form.note}
               onChange={(e)=>setForm({...form,tour:e.target.value})}
             >
 
-              <option>Gezi Türü</option>
+              <option>Gezi Türü Seçin</option>
               <option>Mostar Turu</option>
               <option>Saraybosna Turu</option>
               <option>Travnik & Yayçe Turu</option>
@@ -98,6 +104,7 @@ Not: ${form.note}
 
             <input
               placeholder="Kaç kişi?"
+              type="number"
               className="p-4 rounded-xl border bg-white text-slate-900 dark:bg-slate-800 dark:text-white"
               onChange={(e)=>setForm({...form,people:e.target.value})}
             />
@@ -114,18 +121,19 @@ Not: ${form.note}
 
 
           <textarea
-            placeholder="Notunuz"
-            rows={4}
+            placeholder="Eklemek istediğiniz notlar"
+            rows={5}
             className="w-full mt-5 p-4 rounded-xl border bg-white text-slate-900 dark:bg-slate-800 dark:text-white"
             onChange={(e)=>setForm({...form,note:e.target.value})}
           />
 
 
+
           <button
             onClick={sendWhatsApp}
-            className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl text-lg font-bold"
+            className="w-full mt-8 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl text-xl font-bold transition"
           >
-            WhatsApp ile Gönder
+            WhatsApp ile Rezervasyon Gönder
           </button>
 
 
@@ -134,6 +142,8 @@ Not: ${form.note}
 
       </div>
 
+
     </main>
+
   );
 }
