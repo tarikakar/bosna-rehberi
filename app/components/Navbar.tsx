@@ -1,10 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "dark") {
+      document.documentElement.classList.add("dark");
+      setDark(true);
+    }
+  }, []);
+
+
+
+  const toggleDark = () => {
+
+    if (dark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setDark(true);
+    }
+
+  };
 
 
   return (
@@ -13,15 +39,21 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
 
-        <h1 className="text-2xl font-bold text-white">
+        {/* Logo */}
+        <a 
+          href="#"
+          className="text-2xl font-bold text-white"
+        >
           🇧🇦 Bosna Rehberi
-        </h1>
+        </a>
 
 
-        {/* Masaüstü Menü */}
-        <nav className="hidden md:flex gap-8 text-white">
 
-          <a 
+        {/* Desktop Menü */}
+
+        <nav className="hidden md:flex items-center gap-8 text-white">
+
+          <a
             href="#"
             className="hover:text-blue-400 transition"
           >
@@ -29,7 +61,15 @@ export default function Navbar() {
           </a>
 
 
-          <a 
+          <a
+            href="#hakkimizda"
+            className="hover:text-blue-400 transition"
+          >
+            Hakkımızda
+          </a>
+
+
+          <a
             href="#turlar"
             className="hover:text-blue-400 transition"
           >
@@ -37,29 +77,35 @@ export default function Navbar() {
           </a>
 
 
-          <a 
-            href="#"
-            className="hover:text-blue-400 transition"
-          >
-            Hakkımızda
-          </a>
-
-
-          <a 
-            href="#"
+          <a
+            href="#iletisim"
             className="hover:text-blue-400 transition"
           >
             İletişim
           </a>
 
+
         </nav>
+
 
 
 
         <div className="flex items-center gap-3">
 
 
-          {/* Rezervasyon WhatsApp */}
+          {/* Dark Mode */}
+
+          <button
+            onClick={toggleDark}
+            className="bg-slate-700 hover:bg-slate-600 text-white px-3 py-2 rounded-lg transition"
+          >
+            {dark ? "☀️" : "🌙"}
+          </button>
+
+
+
+          {/* Rezervasyon */}
+
           <a
             href="https://wa.me/905332966518?text=Merhaba,%20Bosna%20turları%20için%20rezervasyon%20yapmak%20istiyorum."
             target="_blank"
@@ -72,9 +118,10 @@ export default function Navbar() {
 
 
           {/* Mobil Menü Butonu */}
+
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-white text-3xl"
           >
             ☰
           </button>
@@ -87,42 +134,58 @@ export default function Navbar() {
 
 
 
+
+
       {/* Mobil Menü */}
 
       {open && (
 
-        <div className="md:hidden bg-slate-900 text-white px-6 py-5 space-y-4">
+        <div className="md:hidden bg-slate-900 text-white px-6 py-6 space-y-5">
 
 
-          <a 
+          <a
             href="#"
+            onClick={() => setOpen(false)}
             className="block"
           >
             Anasayfa
           </a>
 
 
-          <a 
-            href="#turlar"
-            className="block"
-          >
-            Turlar
-          </a>
-
-
-          <a 
-            href="#"
+          <a
+            href="#hakkimizda"
+            onClick={() => setOpen(false)}
             className="block"
           >
             Hakkımızda
           </a>
 
 
-          <a 
-            href="#"
+          <a
+            href="#turlar"
+            onClick={() => setOpen(false)}
+            className="block"
+          >
+            Turlar
+          </a>
+
+
+          <a
+            href="#iletisim"
+            onClick={() => setOpen(false)}
             className="block"
           >
             İletişim
+          </a>
+
+
+          <a
+            href="https://wa.me/905332966518?text=Merhaba,%20Bosna%20turları%20için%20rezervasyon%20yapmak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-blue-600 text-center py-3 rounded-xl"
+          >
+            Rezervasyon
           </a>
 
 
