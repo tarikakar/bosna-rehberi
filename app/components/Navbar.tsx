@@ -6,6 +6,7 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false);
 
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700">
 
@@ -20,29 +21,54 @@ export default function Navbar() {
         {/* Masaüstü Menü */}
         <nav className="hidden md:flex gap-8 text-white">
 
-          <a href="#" className="hover:text-blue-400">
+          <a 
+            href="#"
+            className="hover:text-blue-400 transition"
+          >
             Anasayfa
           </a>
 
-          <a href="#turlar" className="hover:text-blue-400">
+
+          <a 
+            href="#turlar"
+            className="hover:text-blue-400 transition"
+          >
             Turlar
           </a>
 
-          <a href="#iletisim" className="hover:text-blue-400">
+
+          <a 
+            href="#"
+            className="hover:text-blue-400 transition"
+          >
+            Hakkımızda
+          </a>
+
+
+          <a 
+            href="#"
+            className="hover:text-blue-400 transition"
+          >
             İletişim
           </a>
 
         </nav>
 
 
+
         <div className="flex items-center gap-3">
 
 
-          <button
-            className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg text-white font-semibold"
+          {/* Rezervasyon WhatsApp */}
+          <a
+            href="https://wa.me/905332966518?text=Merhaba,%20Bosna%20turları%20için%20rezervasyon%20yapmak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold text-white transition"
           >
             Rezervasyon
-          </button>
+          </a>
+
 
 
           {/* Mobil Menü Butonu */}
@@ -60,22 +86,45 @@ export default function Navbar() {
       </div>
 
 
+
       {/* Mobil Menü */}
+
       {open && (
 
         <div className="md:hidden bg-slate-900 text-white px-6 py-5 space-y-4">
 
-          <a href="#" className="block">
+
+          <a 
+            href="#"
+            className="block"
+          >
             Anasayfa
           </a>
 
-          <a href="#turlar" className="block">
+
+          <a 
+            href="#turlar"
+            className="block"
+          >
             Turlar
           </a>
 
-          <a href="#iletisim" className="block">
+
+          <a 
+            href="#"
+            className="block"
+          >
+            Hakkımızda
+          </a>
+
+
+          <a 
+            href="#"
+            className="block"
+          >
             İletişim
           </a>
+
 
         </div>
 
