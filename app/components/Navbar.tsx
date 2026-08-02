@@ -47,10 +47,17 @@ export default function Navbar() {
         >
 
           <Image
+
             src="/images/favicon.png"
-            alt="Bosna Pusulası"
+
+            alt="Bosna Pusulası Logo"
+
             width={60}
+
             height={60}
+
+            priority
+
             className="
             rounded-full
             object-cover
@@ -83,10 +90,12 @@ export default function Navbar() {
               Mostar ve Saraybosna Turları
             </p>
 
+
           </div>
 
 
         </Link>
+
 
 
 
@@ -101,6 +110,7 @@ export default function Navbar() {
           "
         >
 
+
           <Link
             href="/"
             className="
@@ -112,6 +122,7 @@ export default function Navbar() {
           >
             Ana Sayfa
           </Link>
+
 
 
           <Link
@@ -127,6 +138,7 @@ export default function Navbar() {
           </Link>
 
 
+
           <Link
             href="/rehber"
             className="
@@ -138,6 +150,7 @@ export default function Navbar() {
           >
             Rehber
           </Link>
+
 
 
           <Link
@@ -155,6 +168,7 @@ export default function Navbar() {
           >
             Rezervasyon
           </Link>
+
 
 
         </div>
