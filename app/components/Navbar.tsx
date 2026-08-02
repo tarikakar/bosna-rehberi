@@ -1,22 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Navbar() {
-
-  const [dark, setDark] = useState(false);
-
-
-  const toggleDark = () => {
-
-    document.documentElement.classList.toggle("dark");
-
-    setDark(!dark);
-
-  };
-
 
   return (
 
@@ -27,10 +13,12 @@ export default function Navbar() {
       left-0
       right-0
       z-50
-      bg-white/80
-      dark:bg-slate-950/80
-      backdrop-blur-md
-      shadow-sm
+      bg-white/90
+      dark:bg-slate-950/90
+      backdrop-blur
+      border-b
+      border-slate-200
+      dark:border-slate-800
       "
     >
 
@@ -47,28 +35,71 @@ export default function Navbar() {
       >
 
 
+        {/* LOGO */}
+
         <Link
           href="/"
           className="
-          text-2xl
-          font-extrabold
-          text-slate-900
-          dark:text-white
+          flex
+          items-center
+          gap-3
           "
         >
-          Bosna Pusulası
+
+          <Image
+            src="/images/favicon.png"
+            alt="Bosna Pusulası"
+            width={60}
+            height={60}
+            className="
+            rounded-full
+            object-cover
+            "
+          />
+
+
+          <div>
+
+            <h1
+              className="
+              text-xl
+              md:text-2xl
+              font-extrabold
+              text-slate-900
+              dark:text-white
+              "
+            >
+              Bosna Pusulası
+            </h1>
+
+
+            <p
+              className="
+              text-xs
+              text-slate-500
+              dark:text-slate-400
+              "
+            >
+              Mostar ve Saraybosna Turları
+            </p>
+
+          </div>
+
+
         </Link>
 
 
 
+        {/* MENU */}
+
         <div
           className="
-          flex
+          hidden
+          md:flex
           items-center
-          gap-6
+          gap-8
           "
         >
-
 
           <Link
             href="/"
@@ -76,24 +107,24 @@ export default function Navbar() {
             text-slate-700
             dark:text-slate-300
             hover:text-blue-600
+            transition
             "
           >
             Ana Sayfa
           </Link>
 
 
-
           <Link
-            href="/#turlar"
+            href="/turlar/mostar"
             className="
             text-slate-700
             dark:text-slate-300
             hover:text-blue-600
+            transition
             "
           >
             Turlar
           </Link>
-
 
 
           <Link
@@ -102,11 +133,11 @@ export default function Navbar() {
             text-slate-700
             dark:text-slate-300
             hover:text-blue-600
+            transition
             "
           >
-            Gezi Rehberi
+            Rehber
           </Link>
-
 
 
           <Link
@@ -115,33 +146,15 @@ export default function Navbar() {
             bg-blue-600
             hover:bg-blue-700
             text-white
-            px-5
-            py-2
+            px-6
+            py-3
             rounded-xl
             font-bold
+            transition
             "
           >
             Rezervasyon
           </Link>
-
-
-
-          <button
-            onClick={toggleDark}
-            className="
-            px-3
-            py-2
-            rounded-lg
-            bg-slate-200
-            dark:bg-slate-800
-            text-slate-800
-            dark:text-white
-            "
-          >
-
-            {dark ? "☀️" : "🌙"}
-
-          </button>
 
 
         </div>
