@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
+      id="anasayfa"
       className="
         relative
         min-h-screen
@@ -17,6 +18,7 @@ export default function Hero() {
         backgroundPosition: "center",
       }}
     >
+      {/* Karartma Katmanı */}
       <div
         className="
           absolute
@@ -25,6 +27,7 @@ export default function Hero() {
         "
       />
 
+      {/* İçerik */}
       <div
         className="
           relative
@@ -53,8 +56,8 @@ export default function Hero() {
             mb-8
           "
         >
-          Mostar, Saraybosna, Travnik ve <strong>Jajce</strong>
-          {" "}rotalarında unutulmaz Bosna deneyimleri.
+          Mostar, Saraybosna, Travnik ve <strong>Jajce</strong>{" "}
+          rotalarında unutulmaz Bosna deneyimleri.
         </p>
 
         <div
