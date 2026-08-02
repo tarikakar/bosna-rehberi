@@ -1,201 +1,124 @@
+import Link from "next/link";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  ArrowUp,
+} from "lucide-react";
+
 export default function Footer() {
   return (
-    <footer
-      className="
-      bg-slate-950
-      text-white
-      py-16
-      px-6
-      "
-    >
+    <footer className="bg-slate-950 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-12 md:grid-cols-3">
 
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        grid
-        md:grid-cols-3
-        gap-10
-        "
-      >
+          {/* Logo */}
+          <div>
+            <h2 className="text-3xl font-black">
+              🇧🇦 Bosna Pusulası
+            </h2>
 
-        {/* Logo ve açıklama */}
-
-        <div>
-
-          <h2
-            className="
-            text-3xl
-            font-extrabold
-            mb-4
-            "
-          >
-            🇧🇦 Bosna Rehberi
-          </h2>
-
-
-          <p
-            className="
-            text-slate-300
-            leading-relaxed
-            "
-          >
-            Bosna'nın tarihini, kültürünü ve eşsiz
-            güzelliklerini yerel rehberler eşliğinde keşfedin.
-          </p>
-
-        </div>
-
-
-
-
-        {/* Hızlı Menü */}
-
-        <div>
-
-          <h3
-            className="
-            text-xl
-            font-bold
-            mb-5
-            "
-          >
-            Hızlı Menü
-          </h3>
-
-
-          <ul
-            className="
-            space-y-3
-            text-slate-300
-            "
-          >
-
-            <li>
-              <a href="/">
-                Anasayfa
-              </a>
-            </li>
-
-
-            <li>
-              <a href="/#turlar">
-                Turlar
-              </a>
-            </li>
-
-
-            <li>
-              <a href="/#iletisim">
-                İletişim
-              </a>
-            </li>
-
-
-            <li>
-              <a href="/rezervasyon">
-                Rezervasyon
-              </a>
-            </li>
-
-
-          </ul>
-
-        </div>
-
-
-
-
-
-
-        {/* İletişim */}
-
-        <div>
-
-          <h3
-            className="
-            text-xl
-            font-bold
-            mb-5
-            "
-          >
-            İletişim
-          </h3>
-
-
-
-          <div
-            className="
-            space-y-4
-            text-slate-300
-            "
-          >
-
-
-            <a
-              href="https://wa.me/905332966518"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              flex
-              items-center
-              gap-3
-              hover:text-green-400
-              transition
-              "
-            >
-
-              <span>
-                💬
-              </span>
-
-              <span>
-                WhatsApp Destek
-              </span>
-
-            </a>
-
-
-
-            <p>
-              🇧🇦 Bosna Hersek Turları
+            <p className="mt-5 leading-8 text-slate-400">
+              Bosna Hersek'in tarihi ve doğal güzelliklerini yerel
+              rehberler eşliğinde keşfetmeniz için güvenilir tur hizmeti
+              sunuyoruz.
             </p>
-
-
-            <p>
-              🕘 Her gün 09:00 - 22:00
-            </p>
-
-
           </div>
 
+          {/* Menü */}
+          <div>
+            <h3 className="mb-5 text-xl font-bold">
+              Hızlı Menü
+            </h3>
+
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/#anasayfa"
+                className="transition hover:text-blue-400"
+              >
+                Ana Sayfa
+              </Link>
+
+              <Link
+                href="/#turlar"
+                className="transition hover:text-blue-400"
+              >
+                Turlar
+              </Link>
+
+              <Link
+                href="/#neden-biz"
+                className="transition hover:text-blue-400"
+              >
+                Neden Biz
+              </Link>
+
+              <Link
+                href="/#yorumlar"
+                className="transition hover:text-blue-400"
+              >
+                Yorumlar
+              </Link>
+            </div>
+          </div>
+
+          {/* İletişim */}
+          <div>
+            <h3 className="mb-5 text-xl font-bold">
+              İletişim
+            </h3>
+
+            <div className="space-y-5">
+
+              <a
+                href="tel:+905462368215"
+                className="flex items-center gap-3 text-slate-300 transition hover:text-green-400"
+              >
+                <Phone size={20} />
+                +90 546 236 82 15
+              </a>
+
+              <div className="flex items-center gap-3 text-slate-300">
+                <MapPin size={20} />
+                Bosna Hersek Turları
+              </div>
+
+              <div className="flex items-center gap-3 text-slate-300">
+                <Clock size={20} />
+                Her Gün • 09:00 - 22:00
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
+        {/* Alt Kısım */}
+        <div className="mt-14 border-t border-slate-800 pt-8">
+          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
 
+            <div className="text-center md:text-left">
+              <p className="text-slate-400">
+                © {new Date().getFullYear()} Bosna Pusulası
+              </p>
+
+              <p className="mt-2 text-sm text-slate-500">
+                Tüm hakları saklıdır.
+              </p>
+            </div>
+
+            <a
+              href="#anasayfa"
+              className="rounded-full bg-blue-600 p-3 transition hover:scale-110 hover:bg-blue-700"
+              aria-label="Sayfanın Başına Dön"
+            >
+              <ArrowUp size={22} />
+            </a>
+
+          </div>
+        </div>
 
       </div>
-
-
-
-
-
-      <div
-        className="
-        border-t
-        border-slate-800
-        mt-12
-        pt-6
-        text-center
-        text-slate-400
-        "
-      >
-
-        © 2026 Bosna Rehberi. Tüm hakları saklıdır.
-
-      </div>
-
-
     </footer>
   );
 }
