@@ -1,67 +1,194 @@
 const tours = [
   {
-    title: "Saraybosna Turu",
-    description:
-      "Başçarşı, Sebil, Latin Köprüsü ve Tünel Müzesi.",
-    duration: "Tam Gün",
-  },
-  {
     title: "Mostar Turu",
+    image: "/images/hero.png",
     description:
-      "Mostar Köprüsü, Blagaj Tekkesi ve Poçitelj.",
-    duration: "Tam Gün",
+      "Mostar Köprüsü, Blagaj Tekkesi ve Poçitel'in tarihi atmosferini keşfedin.",
   },
+
   {
-    title: "Travnik & Jajce Turu",
+    title: "Saraybosna Turu",
+    image: "/images/saraybosna.jpg",
     description:
-      "Travnik Kalesi, Plava Voda, Jajce Şelalesi ve tarihi şehir merkezi.",
-    duration: "Tam Gün",
+      "Başçarşı, Sebil, Latin Köprüsü ve Tünel Müzesi ile Saraybosna'nın tarihini keşfedin.",
+  },
+
+  {
+    title: "Travnik & Yayçe Turu",
+    image: "/images/travnik.jpg",
+    description:
+      "Travnik Kalesi, Plava Voda ve Yayçe Şelalesi'nin eşsiz güzelliklerini görün.",
   },
 ];
 
+
 export default function Tours() {
+
   return (
+
     <section
       id="turlar"
-      className="bg-slate-950 text-white py-20 px-6"
+      className="
+      py-24
+      px-6
+      bg-slate-100
+      dark:bg-slate-950
+      "
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Popüler Turlar
-        </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {tours.map((tour) => (
+      <div className="max-w-7xl mx-auto">
+
+
+        <div className="text-center mb-14">
+
+
+          <h2 className="
+          text-4xl
+          md:text-5xl
+          font-extrabold
+          text-slate-900
+          dark:text-white
+          ">
+
+            Popüler Turlar
+
+          </h2>
+
+
+          <p className="
+          mt-4
+          text-lg
+          text-slate-600
+          dark:text-slate-300
+          ">
+
+            Bosna'nın en güzel rotalarını keşfedin.
+
+          </p>
+
+
+        </div>
+
+
+
+
+        <div
+          className="
+          grid
+          md:grid-cols-3
+          gap-8
+          "
+        >
+
+
+          {tours.map((tour, index) => (
+
             <div
-              key={tour.title}
-              className="bg-slate-900 rounded-2xl p-6 border border-slate-800 hover:border-emerald-500 transition-all duration-300 hover:-translate-y-2"
+
+              key={index}
+
+              className="
+              bg-white
+              dark:bg-slate-900
+              rounded-3xl
+              overflow-hidden
+              shadow-xl
+              hover:-translate-y-2
+              transition
+              "
+
             >
-              <h3 className="text-2xl font-semibold mb-3">
-                {tour.title}
-              </h3>
 
-              <p className="text-slate-300 mb-6">
-                {tour.description}
-              </p>
 
-              <div className="flex items-center justify-between">
-                <span className="text-emerald-400 font-medium">
-                  {tour.duration}
-                </span>
+              <img
+
+                src={tour.image}
+
+                alt={tour.title}
+
+                className="
+                w-full
+                h-64
+                object-cover
+                "
+
+              />
+
+
+
+              <div className="p-6">
+
+
+                <h3 className="
+                text-2xl
+                font-bold
+                text-slate-900
+                dark:text-white
+                mb-3
+                ">
+
+                  {tour.title}
+
+                </h3>
+
+
+
+
+                <p className="
+                text-slate-600
+                dark:text-slate-300
+                leading-relaxed
+                mb-6
+                ">
+
+                  {tour.description}
+
+                </p>
+
+
+
 
                 <a
-                  href="https://wa.me/905332966518"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition"
+
+                  href="/rezervasyon"
+
+                  className="
+                  block
+                  text-center
+                  bg-blue-600
+                  hover:bg-blue-700
+                  text-white
+                  py-3
+                  rounded-xl
+                  font-bold
+                  transition
+                  "
+
                 >
-                  Bilgi Al
+
+                  Rezervasyon
+
                 </a>
+
+
+
               </div>
+
+
             </div>
+
+
           ))}
+
+
         </div>
+
+
       </div>
+
+
     </section>
+
   );
+
 }
