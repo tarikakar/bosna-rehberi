@@ -7,14 +7,13 @@ import { useState } from "react";
 export default function Navbar() {
 
   const [dark, setDark] = useState(false);
-  const [menu, setMenu] = useState(false);
 
 
   const toggleDark = () => {
 
-    setDark(!dark);
-
     document.documentElement.classList.toggle("dark");
+
+    setDark(!dark);
 
   };
 
@@ -28,21 +27,24 @@ export default function Navbar() {
       left-0
       right-0
       z-50
-      bg-slate-950
-      border-b
-      border-slate-800
+      bg-white/80
+      dark:bg-slate-950/80
+      backdrop-blur-md
+      shadow-sm
       "
     >
 
-      <div className="
-      max-w-7xl
-      mx-auto
-      px-6
-      py-4
-      flex
-      items-center
-      justify-between
-      ">
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        px-6
+        py-4
+        flex
+        items-center
+        justify-between
+        "
+      >
 
 
         <Link
@@ -50,70 +52,66 @@ export default function Navbar() {
           className="
           text-2xl
           font-extrabold
-          text-white
+          text-slate-900
+          dark:text-white
           "
         >
-          🇧🇦 Bosna Rehberi
+          Bosna Pusulası
         </Link>
 
 
 
-        {/* Masaüstü Menü */}
+        <div
+          className="
+          flex
+          items-center
+          gap-6
+          "
+        >
 
-        <div className="
-        hidden
-        md:flex
-        items-center
-        gap-8
-        text-white
-        font-medium
-        ">
 
-          <Link href="/">
-            Anasayfa
+          <Link
+            href="/"
+            className="
+            text-slate-700
+            dark:text-slate-300
+            hover:text-blue-600
+            "
+          >
+            Ana Sayfa
           </Link>
 
-          <Link href="/#hakkimizda">
-            Hakkımızda
-          </Link>
 
-          <Link href="/#turlar">
+
+          <Link
+            href="/#turlar"
+            className="
+            text-slate-700
+            dark:text-slate-300
+            hover:text-blue-600
+            "
+          >
             Turlar
           </Link>
 
-          <Link href="/#iletisim">
-            İletişim
-          </Link>
-
-        </div>
 
 
-
-
-        <div className="flex items-center gap-3">
-
-
-          <button
-            onClick={toggleDark}
+          <Link
+            href="/rehber"
             className="
-            bg-slate-800
-            hover:bg-slate-700
-            text-white
-            px-4
-            py-2
-            rounded-xl
+            text-slate-700
+            dark:text-slate-300
+            hover:text-blue-600
             "
           >
-            🌙
-          </button>
+            Gezi Rehberi
+          </Link>
 
 
 
           <Link
             href="/rezervasyon"
             className="
-            hidden
-            md:block
             bg-blue-600
             hover:bg-blue-700
             text-white
@@ -128,20 +126,20 @@ export default function Navbar() {
 
 
 
-          {/* Mobil Menü Butonu */}
-
           <button
-
-            onClick={() => setMenu(!menu)}
-
+            onClick={toggleDark}
             className="
-            md:hidden
-            text-white
-            text-3xl
+            px-3
+            py-2
+            rounded-lg
+            bg-slate-200
+            dark:bg-slate-800
+            text-slate-800
+            dark:text-white
             "
           >
 
-            ☰
+            {dark ? "☀️" : "🌙"}
 
           </button>
 
@@ -150,80 +148,6 @@ export default function Navbar() {
 
 
       </div>
-
-
-
-
-      {/* Mobil Menü */}
-
-      {menu && (
-
-        <div
-          className="
-          md:hidden
-          bg-slate-900
-          px-6
-          py-6
-          space-y-4
-          text-white
-          "
-        >
-
-          <Link
-            href="/"
-            onClick={() => setMenu(false)}
-            className="block"
-          >
-            Anasayfa
-          </Link>
-
-
-          <Link
-            href="/#hakkimizda"
-            onClick={() => setMenu(false)}
-            className="block"
-          >
-            Hakkımızda
-          </Link>
-
-
-          <Link
-            href="/#turlar"
-            onClick={() => setMenu(false)}
-            className="block"
-          >
-            Turlar
-          </Link>
-
-
-          <Link
-            href="/#iletisim"
-            onClick={() => setMenu(false)}
-            className="block"
-          >
-            İletişim
-          </Link>
-
-
-          <Link
-            href="/rezervasyon"
-            onClick={() => setMenu(false)}
-            className="
-            block
-            bg-blue-600
-            text-center
-            py-3
-            rounded-xl
-            font-bold
-            "
-          >
-            Rezervasyon
-          </Link>
-
-
-        </div>
-
-      )}
 
 
     </nav>
