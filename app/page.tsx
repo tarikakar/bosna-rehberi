@@ -52,16 +52,18 @@ export default function Home() {
             "
           >
             Mostar, Saraybosna, Travnik ve Jajce turlarımız hakkında
-            bilgi almak için aşağıdaki WhatsApp numaralarından
-            bize ulaşabilirsiniz.
+            bilgi almak için aşağıdaki WhatsApp numaralarından bize
+            ulaşabilirsiniz.
           </p>
 
-          <div className="flex flex-col md:flex-row justify-center gap-6">
+          <div className="flex flex-col items-center gap-5">
             <a
               href="https://wa.me/905332966518"
               target="_blank"
               rel="noopener noreferrer"
               className="
+                w-full
+                max-w-md
                 bg-green-600
                 hover:bg-green-700
                 text-white
@@ -71,9 +73,10 @@ export default function Home() {
                 font-bold
                 text-lg
                 transition
+                shadow-lg
               "
             >
-              💬 WhatsApp
+              💬 WhatsApp Destek 1
               <br />
               +90 533 296 65 18
             </a>
@@ -83,6 +86,8 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="
+                w-full
+                max-w-md
                 bg-green-600
                 hover:bg-green-700
                 text-white
@@ -92,17 +97,19 @@ export default function Home() {
                 font-bold
                 text-lg
                 transition
+                shadow-lg
               "
             >
-              💬 WhatsApp
+              💬 WhatsApp Destek 2
               <br />
               +90 546 236 82 15
             </a>
           </div>
 
-          <p className="mt-8 text-slate-400">
-            Haftanın 7 günü WhatsApp üzerinden bize ulaşabilirsiniz.
-          </p>
+          <div className="mt-10 text-slate-400 space-y-2">
+            <p>🕘 Her gün 09:00 – 22:00</p>
+            <p>⚡ Genellikle 5 dakika içinde yanıtlıyoruz.</p>
+          </div>
         </div>
       </section>
 
