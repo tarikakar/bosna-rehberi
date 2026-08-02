@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FloatingWhatsapp from "./components/FloatingWhatsapp";
 
 
 export const metadata: Metadata = {
@@ -30,11 +31,13 @@ export default function RootLayout({
 
   return (
 
-    <html lang="tr">
+    <html lang="tr" suppressHydrationWarning>
 
       <body>
 
         {children}
+
+        <FloatingWhatsapp />
 
       </body>
 
