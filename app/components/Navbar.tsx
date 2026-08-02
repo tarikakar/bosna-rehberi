@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 
 export default function Navbar() {
@@ -70,6 +71,7 @@ export default function Navbar() {
             Bosna Pusulası
           </span>
 
+
         </Link>
 
 
@@ -84,6 +86,7 @@ export default function Navbar() {
           gap-8
           "
         >
+
 
           <Link
             href="/"
@@ -127,6 +130,12 @@ export default function Navbar() {
 
 
 
+          {/* KARANLIK MOD */}
+
+          <ThemeToggle />
+
+
+
           <Link
             href="/rezervasyon"
             className="
@@ -148,6 +157,7 @@ export default function Navbar() {
 
 
       </div>
+
 
     </nav>
 
