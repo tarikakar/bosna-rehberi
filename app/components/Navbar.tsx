@@ -2,11 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
-
 export default function Navbar() {
-
   return (
-
     <nav
       className="
       fixed
@@ -22,7 +19,6 @@ export default function Navbar() {
       dark:border-slate-800
       "
     >
-
       <div
         className="
         max-w-7xl
@@ -34,10 +30,7 @@ export default function Navbar() {
         justify-between
         "
       >
-
-
         {/* LOGO */}
-
         <Link
           href="/"
           className="
@@ -46,7 +39,6 @@ export default function Navbar() {
           gap-3
           "
         >
-
           <Image
             src="/images/favicon.png"
             alt="Bosna Pusulası"
@@ -59,7 +51,6 @@ export default function Navbar() {
             "
           />
 
-
           <span
             className="
             text-2xl
@@ -70,14 +61,9 @@ export default function Navbar() {
           >
             Bosna Pusulası
           </span>
-
-
         </Link>
 
-
-
         {/* MENÜ */}
-
         <div
           className="
           hidden
@@ -86,8 +72,6 @@ export default function Navbar() {
           gap-8
           "
         >
-
-
           <Link
             href="/"
             className="
@@ -100,10 +84,9 @@ export default function Navbar() {
             Ana Sayfa
           </Link>
 
-
-
-          <Link
-            href="/#turlar"
+          {/* TURLAR */}
+          <a
+            href="#turlar"
             className="
             text-slate-700
             dark:text-slate-300
@@ -112,9 +95,7 @@ export default function Navbar() {
             "
           >
             Turlar
-          </Link>
-
-
+          </a>
 
           <Link
             href="/rehber"
@@ -128,13 +109,8 @@ export default function Navbar() {
             Rehber
           </Link>
 
-
-
           {/* KARANLIK MOD */}
-
           <ThemeToggle />
-
-
 
           <Link
             href="/rezervasyon"
@@ -151,16 +127,8 @@ export default function Navbar() {
           >
             Rezervasyon
           </Link>
-
-
         </div>
-
-
       </div>
-
-
     </nav>
-
   );
-
 }

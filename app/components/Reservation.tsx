@@ -119,7 +119,7 @@ Kişi Sayısı: ${form.people}
               <option>Gezi Türü Seçin</option>
               <option>Mostar Turu</option>
               <option>Saraybosna Turu</option>
-              <option>Travnik & Yayçe Turu</option>
+              <option>Travnik & <YJajce></YJajce> Turu</option>
 
             </select>
 

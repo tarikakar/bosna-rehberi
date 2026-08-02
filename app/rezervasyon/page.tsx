@@ -276,7 +276,7 @@ Tarih: ${form.date}
                 </option>
 
                 <option>
-                  Travnik & Yayçe Turu
+                  Travnik & <Jajce></Jajce> Turu
                 </option>
 
 

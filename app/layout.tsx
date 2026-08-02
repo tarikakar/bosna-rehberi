@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Bosna Pusulası | Mostar ve Saraybosna Turları",
 
   description:
-    "Bosna Pusulası ile Mostar, Saraybosna, Travnik ve Yayçe turlarını keşfedin.",
+    "Bosna Pusulası ile Mostar, Saraybosna, Travnik ve Jajce turlarını keşfedin.",
 
   icons: {
     icon: "/favicon.png",
