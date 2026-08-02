@@ -49,8 +49,8 @@ export default function Navbar() {
           <Image
             src="/images/favicon.png"
             alt="Bosna Pusulası"
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             priority
             className="
             rounded-full
@@ -59,33 +59,16 @@ export default function Navbar() {
           />
 
 
-          <div>
-
-            <h1
-              className="
-              text-xl
-              md:text-2xl
-              font-extrabold
-              text-slate-900
-              dark:text-white
-              "
-            >
-              Bosna Pusulası
-            </h1>
-
-
-            <p
-              className="
-              text-xs
-              text-slate-500
-              dark:text-slate-400
-              "
-            >
-              Mostar ve Saraybosna Turları
-            </p>
-
-          </div>
-
+          <span
+            className="
+            text-2xl
+            font-extrabold
+            text-slate-900
+            dark:text-white
+            "
+          >
+            Bosna Pusulası
+          </span>
 
         </Link>
 
@@ -115,8 +98,9 @@ export default function Navbar() {
           </Link>
 
 
+
           <Link
-            href="/turlar/mostar"
+            href="/#turlar"
             className="
             text-slate-700
             dark:text-slate-300
@@ -126,6 +110,7 @@ export default function Navbar() {
           >
             Turlar
           </Link>
+
 
 
           <Link
@@ -139,6 +124,7 @@ export default function Navbar() {
           >
             Rehber
           </Link>
+
 
 
           <Link
@@ -162,7 +148,6 @@ export default function Navbar() {
 
 
       </div>
-
 
     </nav>
 

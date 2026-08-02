@@ -1,69 +1,90 @@
+import Link from "next/link";
+
+
 const tours = [
+
   {
     title: "Mostar Turu",
-    image: "/images/hero.png",
     description:
-      "Mostar Köprüsü, Blagaj Tekkesi ve Poçitel'in tarihi atmosferini keşfedin.",
+      "Mostar Köprüsü, Blagaj Tekkesi ve Poçitel tarihi köyünü keşfedin.",
+    image: "/images/hero.png",
+    duration: "Tam Gün",
   },
+
 
   {
     title: "Saraybosna Turu",
-    image: "/images/saraybosna.jpg",
     description:
-      "Başçarşı, Sebil, Latin Köprüsü ve Tünel Müzesi ile Saraybosna'nın tarihini keşfedin.",
+      "Başçarşı, Sebil, Latin Köprüsü ve Tünel Müzesi ile tarihin izlerini takip edin.",
+    image: "/images/saraybosna.jpg",
+    duration: "Tam Gün",
   },
+
 
   {
     title: "Travnik & Yayçe Turu",
-    image: "/images/travnik.jpg",
     description:
-      "Travnik Kalesi, Plava Voda ve Yayçe Şelalesi'nin eşsiz güzelliklerini görün.",
+      "Travnik Kalesi, Plava Voda ve Yayçe Şelalesi ile doğal güzellikleri keşfedin.",
+    image: "/images/travnik.jpg",
+    duration: "Tam Gün",
   },
+
 ];
 
 
+
 export default function Tours() {
+
 
   return (
 
     <section
       id="turlar"
       className="
-      py-24
-      px-6
+      py-20
       bg-slate-100
       dark:bg-slate-950
       "
     >
 
-      <div className="max-w-7xl mx-auto">
+
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        px-6
+        "
+      >
 
 
-        <div className="text-center mb-14">
+        <div
+          className="
+          text-center
+          mb-12
+          "
+        >
 
-
-          <h2 className="
-          text-4xl
-          md:text-5xl
-          font-extrabold
-          text-slate-900
-          dark:text-white
-          ">
-
+          <h2
+            className="
+            text-4xl
+            font-extrabold
+            text-slate-900
+            dark:text-white
+            mb-4
+            "
+          >
             Popüler Turlar
-
           </h2>
 
 
-          <p className="
-          mt-4
-          text-lg
-          text-slate-600
-          dark:text-slate-300
-          ">
-
-            Bosna'nın en güzel rotalarını keşfedin.
-
+          <p
+            className="
+            text-slate-600
+            dark:text-slate-400
+            text-lg
+            "
+          >
+            Bosna'nın en özel rotalarını yerel rehberler eşliğinde keşfedin.
           </p>
 
 
@@ -84,19 +105,14 @@ export default function Tours() {
           {tours.map((tour, index) => (
 
             <div
-
               key={index}
-
               className="
               bg-white
               dark:bg-slate-900
               rounded-3xl
               overflow-hidden
               shadow-xl
-              hover:-translate-y-2
-              transition
               "
-
             >
 
 
@@ -116,16 +132,22 @@ export default function Tours() {
 
 
 
-              <div className="p-6">
+              <div
+                className="
+                p-6
+                "
+              >
 
 
-                <h3 className="
-                text-2xl
-                font-bold
-                text-slate-900
-                dark:text-white
-                mb-3
-                ">
+                <h3
+                  className="
+                  text-2xl
+                  font-bold
+                  text-slate-900
+                  dark:text-white
+                  mb-3
+                  "
+                >
 
                   {tour.title}
 
@@ -133,13 +155,13 @@ export default function Tours() {
 
 
 
-
-                <p className="
-                text-slate-600
-                dark:text-slate-300
-                leading-relaxed
-                mb-6
-                ">
+                <p
+                  className="
+                  text-slate-600
+                  dark:text-slate-400
+                  mb-4
+                  "
+                >
 
                   {tour.description}
 
@@ -147,36 +169,47 @@ export default function Tours() {
 
 
 
+                <div
+                  className="
+                  text-blue-600
+                  dark:text-blue-400
+                  font-bold
+                  mb-5
+                  "
+                >
 
-                <a
+                  {tour.duration}
+
+                </div>
+
+
+
+                <Link
 
                   href="/rezervasyon"
 
                   className="
-                  block
-                  text-center
+                  inline-block
                   bg-blue-600
                   hover:bg-blue-700
                   text-white
+                  px-6
                   py-3
                   rounded-xl
                   font-bold
-                  transition
                   "
 
                 >
 
-                  Rezervasyon
+                  Bilgi Al
 
-                </a>
-
+                </Link>
 
 
               </div>
 
 
             </div>
-
 
           ))}
 
