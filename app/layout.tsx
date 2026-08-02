@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import GoogleAnalytics from "./components/GoogleAnalytics";
-import AnalyticsEvents from "./components/AnalyticsEvents";
 
 
 const geistSans = Geist({
@@ -90,9 +89,6 @@ export default function RootLayout({
 
 
         <GoogleAnalytics />
-
-
-        <AnalyticsEvents />
 
 
         {children}
